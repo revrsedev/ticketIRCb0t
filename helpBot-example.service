@@ -1,0 +1,13 @@
+[Unit]
+Description=HelpBot #helpchan IRC Service
+After=network.target
+
+[Service]
+Type=debian
+User=adm
+WorkingDirectory=/home/xxxx/irc/bots/helpbot
+ExecStart=ExecStart=/home/xxxx/irc/bots/.env/bin/python3 /home/xxxx/irc/bots/helpbot/helpBot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
